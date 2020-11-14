@@ -148,5 +148,8 @@
       }
     }
   },
-  "defaultProject": "BanglaSketch"
+  "defaultProject": "BanglaSketch",
+  "cli": {
+    "analytics": "eaa4a46b-c91f-4607-9ff8-5bd458837e56"
+  }
 }

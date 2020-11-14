@@ -1,3 +1,4 @@
+import { ConfigServices } from './services/config/config-services';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -44,7 +45,7 @@ import { SideNavbarComponent } from './Components/home/side-navbar/side-navbar.c
 import { MatCardModule } from '@angular/material/card';
 import { NewsDetailComponent } from './Components/news/news-detail/news-detail.component';
 import { PublicationsComponent } from './Components/publications/publications.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +69,7 @@ import { PublicationsComponent } from './Components/publications/publications.co
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule, FlexLayoutModule,
@@ -77,7 +79,7 @@ import { PublicationsComponent } from './Components/publications/publications.co
     MatTabsModule, MatFormFieldModule, MatIconModule, MatIconModule, MatInputModule, MatSelectModule, MatProgressSpinnerModule,
     MatCarouselModule.forRoot()
   ],
-  providers: [],
+  providers: [ConfigServices],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
